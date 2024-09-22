@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="fade-in">
+        <div class="logo">
+            <a href="home.html">
+                <h1><span>W</span><span>N</span><span>C</span></h1>
+            </a>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html#about">About</a></li>
+                    <li><a href="home.html#learn">Learn</a></li>
+                    <li><a href="upcoming-events.html">Events</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="dropdown-cta"><a class="cta" href="home.html#contact">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a class="cta main-cta" href="home.html#contact">Join Us</a>
+
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Animated Blue Gradient Background -->
+    <section id="events-hero" class="events-hero fade-in">
+        <h1>Upcoming Events</h1>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="fade-in" style="padding: 50px 20px; background-color: #f9f9f9;">
+        <div class="events-container">
+            <!-- Event Cards will be dynamically inserted here -->
+        </div>
+        <button id="load-more" class="cta">Load More</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="fade-in">
+        <div class="footer-container">
+            <h4>Join us on social media</h4>
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/wiscneuromorphic?igsh=MWNubzNuYmlyYnAwbQ==" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/static/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/wisconsin-neuromorphic-computing/" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/static/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://discord.gg/TXHZQSCXME" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/discord.png" alt="Discord">
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WNC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event handling script -->
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
