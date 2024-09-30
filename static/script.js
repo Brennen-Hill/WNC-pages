@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to load events from the .txt file
     function loadEventsFromTxt(startIndex = 0, loadAmount = 4) {
-        fetch('/static/events.txt')
+        fetch('static/events.txt')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok: ' + response.statusText);
