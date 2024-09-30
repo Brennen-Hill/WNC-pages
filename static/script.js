@@ -168,8 +168,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     const title = eventDetails[0]?.trim() || 'No Title';
                     const date = eventDetails[1]?.trim() || 'Date not available';
                     const address = eventDetails[2]?.trim() || 'Address not available';
-                    const shortDesc = eventDetails[3]?.trim() || '';
+                    let shortDesc = eventDetails[3]?.trim() || '';
                     const fullText = eventDetails[4]?.trim() || '';
+
+                    // Add hyperlink for 'slides' in shortDesc
+                    if (shortDesc.includes('slides')) {
+                        shortDesc = shortDesc.replace(
+                            'slides', 
+                            '<a href="https://docs.google.com/presentation/d/11Ufb5dq4S8-EYx_9250Yi0ua0ViQpRMAb7C63HZXT7A/edit?usp=sharing" target="_blank">slides</a>'
+                        );
+                    }
 
                     const eventCard = document.createElement('div');
                     eventCard.classList.add('event-card');
