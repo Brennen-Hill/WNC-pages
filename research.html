@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Projects</title>
+    <link rel="icon" href="static/website_icon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="fade-in">
+        <div class="logo">
+            <a href="./">
+                <h1><span>W</span><span>N</span><span>C</span></h1>
+            </a>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./#about">About</a></li>
+                    <li><a href="./#learn">Learn</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li class="dropdown-cta"><a class="cta" href="./#contact">Join Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <a class="cta main-cta" href="./#contact">Join Us</a>
+
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Animated Blue Gradient Background -->
+    <section id="events-hero" class="events-hero fade-in">
+        <h1>Research</h1>
+    </section>
+
+    <!-- Events Section -->
+    <!-- <section id="events" class="fade-in" style="padding: 50px 20px; background-color: #f9f9f9;">
+        <div class="events-container"> -->
+            <!-- Event Cards will be dynamically inserted here -->
+        <!-- </div>
+        <button id="load-more" class="cta">Load More</button>
+    </section> -->
+
+    <section class="fade-in" style="padding: 50px 20px; background-color: #f9f9f9;">
+    <div class="research-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
+
+        <div class="event-card" style="flex: 1 1 500px; max-width: 600px;">
+        <h2>VCNet: Recreating High-Level Visual Cortex Principles for Robust Artificial Vision</h2>
+        <img src="static/vcnet.png" alt="VCNet visual cortex model" class="project-image" style="width: 100%; height: auto; margin-bottom: 15px;">
+        <p>VCNet addresses critical shortcomings of contemporary convolutional neural networks (CNNs), such as data inefficiency, poor generalization to out-of-distribution inputs, and susceptibility to adversarial attacks, by taking inspiration from the primate visual cortex. Emulating biological principles, VCNet incorporates hierarchical processing, dual-stream information segregation (ventral and dorsal pathways), and predictive coding through top-down feedback mechanisms. This architecture is built as a directed acyclic graph reflecting known cortical connectivity patterns, with each computational module designed to mirror specific cortical functionalities.</p>
+        <p>Key innovations include multi-scale feature extraction modeled after V1 cortical receptive fields, recurrent processing blocks inspired by MT/MST for iterative representation refinement, attention modules (CBAM) simulating cortical feature selection, and lateral interaction modules for contextual effects akin to lateral inhibition. VCNet's predictive coding mechanism implements feedback from higher-level areas to lower-level representations, refining feature predictions through error-driven learning.</p>
+        <p>Experimentally, VCNet achieved notable performance improvements on two specialized datasets: the Spots-10 animal pattern classification task and a challenging light field image classification benchmark. VCNet attained a high accuracy of 92.08% on Spots-10, significantly surpassing comparable models. On the light field task, VCNet demonstrated both superior accuracy (74.42%) and exceptional parameter efficiency, outperforming standard CNN architectures like ResNet18, VGG11, and MobileNetV2. These results underscore the potential of neuroscience-informed designs to advance artificial vision, suggesting robust and efficient computational frameworks inspired by biological systems.</p>
+        </div>
+
+        <div class="event-card" style="flex: 1 1 500px; max-width: 600px;">
+        <h2>Beyond Emergence: Scalable and Sample-Efficient Multi-Agent Coordination via Engineered Intention</h2>
+        <img src="static/engineered_intention.png" alt="Engineered communication concept" class="project-image" style="width: 100%; height: auto; margin-bottom: 15px;">
+        <p>In this project, we rigorously compare two communication paradigms—emergent Learned Direct Communication (LDC) and engineered Intention Communication—within a cooperative multi-agent reinforcement learning (MARL) setting involving hunter‑seeker agents in partially observable grid worlds. The LDC approach enables agents to concurrently learn message and action policies end‑to‑end, resulting in simple binary message protocols that facilitate coordination, especially under partial observability. By contrast, our engineered Intention Communication architecture leverages an Imagined Trajectory Generation Module (ITGM) and a Message Generation Network (MGN) to predict future latent trajectories and distill compact, forward‑looking messages. Under resource constraints, the engineered approach achieves near‑optimal success rates (≈97–99 %) even in larger grids, whereas LDC’s performance degrades significantly as complexity increases.</p>
+        <p>This engineered strategy aligns with principles of neuromorphic computing and NeuroAI by emulating how biological neural systems distribute processing across specialized agents that optimize individual goals and broadcast predictive intentions—akin to how cortical microcircuits communicate inferred trajectories via dendritic integration and attention mechanisms. Moreover, the reliance on predictive, intention‑based messaging mirrors collective intelligence phenomena observed in biological swarms, where simple, selfish agents greedily pursue local optima yet share information that culminates in coherent group behavior. This architecture also resonates with neuromorphic SNN‑like efficiencies in encoding temporal predictions into compact signals, while echoing NeuroAI’s call to ground AI in embodied, evolutionarily inspired cognitive frameworks. Overall, our engineered communication design not only enhances scalability and sample efficiency in MARL under minimal compute but also offers a neurobiologically plausible template for future neuromorphic cooperative agents informed by NeuroAI perspectives.</p>
+        </div>
+
+        <div class="event-card" style="flex: 1 1 500px; max-width: 600px;">
+        <h2>Neural Organoid Training and Measurement of Synaptic Plasticity in Multiple Environments</h2>
+        <img src="static/organoid_environments.jpg" alt="Neural organoid experiment" class="project-image" style="width: 100%; height: auto; margin-bottom: 15px;">
+        <p>This project investigates the capacity of neural organoids to learn and adapt in structured virtual environments by designing experimental systems that enable measurement of synaptic plasticity mechanisms such as long-term potentiation (LTP) and long-term depression (LTD). Utilizing FinalSpark’s neuro platform with 32 electrodes arranged into recording and stimulation groups, we developed three interactive scenarios to train neural organoids via electrical stimulation and real-time feedback. The first environment recreates the game Pong, where neural organoids control paddle movements in response to encoded positional data, with reinforcement delivered through predictable or unpredictable stimuli. The second design introduces a one-dimensional predator-prey task, where neural organoid-driven agents navigate toward food, testing behavioral learning under variable reward and punishment conditions. A third experiment simulates operant conditioning by requiring a neural organoid -controlled agent to avoid a shock zone, using a gradient of aversive stimuli to encode risk.</p>
+        <p>Each environment encodes state information using spatial or frequency-based stimulation patterns and interprets neural organoid responses via spike differentials to drive agent decisions. To evaluate learning, we propose a multimodal approach: electrophysiological recordings (e.g., field potentials and paired-pulse facilitation) detect real-time synaptic changes; calcium imaging using GECIs and calcium-sensitive dyes visualizes activity dynamics; and immunohistochemistry provides molecular evidence of LTP/LTD via receptor profiling and protein phosphorylation. These experimental paradigms allow for controlled, reproducible investigations into neural adaptation, providing a testbed for embodied learning in biological substrates. The framework bridges neuroscience, neuroAI, and neuromorphic computing, offering insights into the emergent behavior of self-organizing living systems under structured input-output loops.</p>
+        </div>
+
+        <div class="event-card" style="flex: 1 1 500px; max-width: 600px;">
+        <h2>Interfacing Large Language Models with Neural Organoids for Autonomous Reinforcement Learning</h2>
+        <img src="static/llm_organoid_interface.webp" alt="LLM and neural organoid interface" class="project-image" style="width: 100%; height: auto; margin-bottom: 15px;">
+        <p>This research project implements an adaptive closed-loop system in which a Large Language Model (LLM) autonomously generates and iteratively refines experimental protocols for stimulating neurospheres in real time. The system begins by initializing a structured dataset that logs data from each iteration, including generated algorithms, execution outputs, neurosphere responses, performance metrics, and any encountered errors. An experiment is selected—such as a behavioral conditioning task modeled after the “Mouse and Shock Room” paradigm or one aimed at maximizing specific neurosphere responses.</p>
+        <p>The LLM is provided with a comprehensive prompt that includes the current state of the neurosphere, the experimental objective, available Neuroplatform commands, valid parameter ranges, and the current dataset. In response, the LLM generates a stimulation algorithm that defines the neural stimulation protocol, data collection strategy, reinforcement signals (reward or punishment), and updates to the experiment state. The generated algorithm is programmatically validated for syntax and parameter constraints. Valid algorithms are executed on the neurosphere, and all resulting data are stored in the dataset. This loop is repeated across multiple iterations within a batch, enabling the LLM to refine its outputs through repeated interaction with the neurosphere.</p>
+        <p>The collected data are used to systematically evaluate the performance of each LLM-generated algorithm, identifying patterns of success and failure based on the experimental objectives. Prompt engineering techniques—including chain-of-thought prompting, few-shot examples, dynamic constraints, and templated structures—are employed to optimize LLM performance. In addition to prompt refinement, the LLM is fine-tuned using supervised learning and reinforcement learning, leveraging data from successful prompt-algorithm-response cycles. This ongoing project integrates neuromorphic computing and NeuroAI, drawing from biological principles in which decentralized agents pursue local goals while sharing information to collectively adapt. It establishes a foundation for autonomous scientific experimentation through the synergy of LLM-driven algorithm generation and living neural systems.</p>
+        </div>
+
+        <div class="event-card" style="flex: 1 1 500px; max-width: 600px;">
+        <h2>A Retina-Inspired Pathway to Real-Time Motion Prediction inside Image Sensors for Extreme-Edge</h2>
+        <img src="static/retina_sensor.webp" alt="Retina-inspired motion prediction" class="project-image" style="width: 100%; height: auto; margin-bottom: 15px;">
+        <p>The project presents a biologically inspired neuromorphic architecture that draws from the motion-predictive capabilities of the vertebrate retina, directly embedding prediction mechanisms into camera pixel hardware. The sensor employs Dynamic Vision Sensor (DVS) pixels to generate event-driven "ON" and "OFF" spikes in response to contrast changes, mirroring retinal bipolar cell function. These spikes are processed through a biphasic filter followed by an integrate-and-fire “spike adder” and a nonlinear circuit to extract temporal dynamics essential for motion prediction.</p>
+        <p>The hardware-algorithm co-design is implemented using GlobalFoundries’ 22 nm FDSOI process, and a 2D array supports multi-directional motion estimation — analogous to directional-selective retinal circuits. To maximize compactness and reduce routing complexity, the design integrates sensor and compute dies via a 3D copper–copper hybrid bonding technique. This approach supports extreme-edge intelligence by performing predictive computation at the first hardware layer—significantly reducing latency and offloading downstream processing.</p>
+        <p>Validated on real-world moving objects, the system achieves real-time motion prediction with a remarkably low energy footprint—18.56 pJ per prediction event in a mixed-signal implementation. This prototype represents the first known realization of a neuromorphic camera sensor capable of on-pixel motion forecasting, promising transformative impact for autonomous, low-power, reactive systems. WNC is collaborating with Dr. Jaiswal to extend previous research by advancing biologically inspired neuromorphic architectures.</p>
+        </div>
+
+    </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer id="footer" class="fade-in">
+        <div class="footer-container">
+            <h4>Join us on social media</h4>
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/wiscneuromorphic?igsh=MWNubzNuYmlyYnAwbQ==" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="static/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="static/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.linkedin.com/company/wisconsin-neuromorphic-computing/" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="static/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://discord.gg/TXHZQSCXME" target="_blank" rel="noopener noreferrer">
+                    <img src="static/discord.png" alt="Discord">
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 WNC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Event handling script -->
+    <script src="static/script.js"></script>
+</body>
+
+</html>
